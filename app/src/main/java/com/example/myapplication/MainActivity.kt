@@ -25,14 +25,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val adapter = ToDoAdapter(items, applicationContext)
+
         title = "ToDo"
-
-        items.add("Test1")
-        items.add("Test2")
-        items.add("Test3")
-
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.adapter = adapter
+
+        Toast.makeText(this, "Press add button to add an item!", Toast.LENGTH_LONG).show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
